@@ -1,0 +1,127 @@
+/* Général */
+body {
+  font-family: 'lato', 'sans-serif';
+  margin: 0;
+  display: grid;
+  grid-template-columns: 20vw 1fr;
+  grid-template-rows: 10vh 1fr 8vh;
+  grid-template-areas:
+  "header navigation"
+  "content content"
+  "footer footer";
+}
+
+/* Header */
+header {
+  margin-left: 2rem;
+  grid-area: header;
+  align-self: center;
+  font-size: 1rem;
+}
+
+/* Navigation */
+nav {
+  grid-area: navigation;
+  align-self: center;
+}
+
+.nav-bar {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  list-style: none;
+  margin-right: 20%;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  display: flex;
+  width: 200px;
+  height: 70px;
+  text-align: center;
+  color: rgb(36, 116, 163);
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: all 0.2s linear;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-bar a:hover {
+  color: rgb(255, 145, 0);
+  font-size: 1.4rem;
+}
+
+/* Main */
+.content {
+  margin: 3rem;
+  grid-area: content;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.7fr 0.7fr 30vh;
+  grid-template-areas:
+  "saumon-boeuf advert advert"
+  "full-row full-row full-row"
+  "bottom bottom bottom";
+  gap: 30px;
+}
+
+.block {
+  border-radius: 25px;
+  -webkit-box-shadow: 7px 3px 15px -5px #0C0C0C; 
+  box-shadow: 7px 3px 15px -5px #0C0C0C;
+}
+
+.saumon-boeuf {
+  grid-area: saumon-boeuf;
+  display: grid;
+  gap: 30px;
+}
+
+.advert {
+  grid-area: advert;
+}
+
+.full-row {
+  grid-area: full-row;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+}
+
+.bottom-container {
+  grid-area: bottom;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Footer */
+footer {
+  justify-content: center;
+  grid-area: footer;
+  border-top: 1px solid;
+  text-align: center;
+  font-size: 1.1rem;
+  padding-top: 20px;
+}
+
+/* Images */
+.title-img {
+  position: absolute;
+  color: white;
+  margin-left: 2rem;
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* FX blocs */
+.clickable {
+  transition: all 0.8s ease;
+}
+.clickable:hover {
+  opacity: 0.4;
+}
